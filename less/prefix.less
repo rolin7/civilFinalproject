@@ -1,0 +1,101 @@
+/*Prefix Styles*/
+.m0{margin: 0;}
+.m0a{margin: 0 auto;}
+.p0{padding: 0;}
+
+body{
+    position: relative;
+}
+
+/*Floating*/
+.fleft{
+    float: left;
+}
+.fright{
+    float: right;
+}
+
+/*Section Fix*/
+section, header, footer{
+    &.row{
+        margin: 0;
+        position: relative;
+    }
+}
+
+/*Ancore*/
+a{
+    outline: none;
+    .transition();
+    &:focus,&:hover{
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+/*Modify Core CSS*/
+.list-inline{
+    margin: 0;
+}
+
+/*Section Title*/
+.sectionTitles{
+    margin-bottom: 40px;
+    .sectionTitle{
+        font-family: @baseFont;
+        font-size: 34px;
+        line-height: 1;
+        text-align: center;
+        margin-top: 0;        
+        &.whiteTC{
+            color: #FFF;
+        }
+    }
+    .sectionSubTitle{
+        font-family: @baseFont;
+        font-size: 17px;
+        line-height: 1;
+        color: #4c545f;
+        text-align: center;
+        &:before,&:after{
+            width: 75px;
+            height: 1px;
+            background: #4c545f;
+            content: '';
+            display: inline-block;
+            top: -4px;
+            position: relative;
+        }
+        &:before{
+            margin-right: 20px;
+        }
+        &:after{
+            margin-left: 20px;
+        }        
+        &.whiteTC{
+            color: #FFF;
+            &:before,&:after{
+                background: #FFF;
+            }
+        }
+    }
+}
+@media (max-width: 1024px){
+    .sectionTitles{
+        .sectionTitle{
+            font-size: 30px;
+        }
+        .sectionSubTitle{
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .container{
+        padding: 0 25px;
+    }
+}
+
+/*MixitUp*/
+.mix{display:none;} 

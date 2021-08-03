@@ -1,0 +1,262 @@
+/*About us*/
+#aboutus{
+    font-family: @baseFont;
+    margin-bottom: 10px;
+    .aboutContent{
+        padding-right: 10px;
+    }
+    .member{
+        margin-top: 30px;
+        h2{            
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 15px;
+            @media (max-width: 1024px){
+                font-size: 24px;
+            }
+        }
+        h3{
+            margin-top: 0;
+            margin-bottom: 15px;
+            @media (max-width: 1024px){
+                font-size: 20px;
+            }
+        }
+        p{
+            font-size: 17px;
+            line-height: 22px;
+            color: @baseColor3;
+            margin: 0;
+            @media (max-width: 1024px){
+                font-size: 14px;
+            }
+        }
+        .textsPart{
+            width: ~"calc(100% - 300px)";
+            @media (max-width: 640px){
+                width: 100%;
+            }
+        }
+        .aboutImg,.memImg{
+            width: 300px;
+            padding:0 0 0 30px;
+            img{
+                width: 100%;
+            }
+            @media (max-width: 640px){
+                width: 100%;
+                float: left;
+                padding: 30px 0 0;
+            }
+        }
+        .memberIntro{
+            height: 62px;
+            background: @baseColor3;
+            .memberSocial{
+                float: right;
+                height: 62px;
+                margin: 10px;
+                li{
+                    padding: 0;
+                    margin: 0 1px;
+                    a{
+                        display: block;
+                        i{
+                            color: @baseColor4;
+                            border: 1px solid darken(@baseColor3,10%);
+                            width: 40px;
+                            line-height: 38px;
+                            height: 40px;
+                            border-radius: 100%;
+                            text-align: center;
+                        }
+                        &:hover{
+                            i{
+                                background: @baseColor;
+                                border-color: @baseColor;
+                                color: #FFF;
+                            }
+                        }
+                    }
+                }                
+                @media (max-width: 480px){
+                    width: 100%;
+                    margin: 0;
+                    padding: 10px;
+                    text-align: center;
+                    li{
+                        display: inline-block;                        
+                    }
+                }
+            }
+            .namePro{
+                float: left;
+                line-height: 62px;
+                background: @baseColor4;
+                position: relative;
+                color: #FFF;
+                font-size: 16px;
+                padding-right: 25px;
+                span.name{
+                    background: @baseColor;
+                    position: relative;
+                    display: inline-block;
+                    float: left;
+                    padding: 0 23px;
+                    font-size: 22px;
+                    font-weight: bold;
+                    margin-right: 25px;
+                    &:after{
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border-top: 10px solid transparent;
+                        border-bottom: 10px solid transparent;
+                        border-left: 10px solid @baseColor;
+                        position: absolute;
+                        top:~"calc(50% - 10px)";
+                        right: -10px;
+                        .transition();
+                    }
+                }                
+                @media (max-width: 480px){
+                    width: 100%;
+                }
+            }
+        }
+        &:nth-child(odd){
+            .textsPart{
+                float: left;
+            }
+            .memImg{
+                float: left;
+                padding:0 0 0 30px;
+            }
+        }
+        &:nth-child(even){
+            .textsPart{
+                float: right
+            }
+            .memImg{
+                float: left;
+                padding:0 30px 0 0;
+            }            
+            .memberIntro{
+                .memberSocial{
+                    float: left;
+                    li{
+                        a{
+                            i{
+                            }
+                        }
+                    }
+                }
+                .namePro{
+                    float: right;
+                    padding: 0 0 0 25px;
+                    span.name{
+                        float: right;
+                        padding: 0 23px;
+                        font-size: 22px;
+                        font-weight: bold;
+                        margin-left: 25px;
+                        margin-right: 0;
+                        &:after{
+                            content: '';
+                            width: 0;
+                            height: 0;
+                            border-top: 10px solid transparent;
+                            border-bottom: 10px solid transparent;
+                            border-right: 10px solid @baseColor;
+                            border-left: 0;
+                            position: absolute;
+                            top:~"calc(50% - 10px)";
+                            right: auto;
+                            left: -10px;
+                            .transition();
+                        }
+                        @media (max-width: 480px){
+                            float: left;
+                            margin-left: 0;
+                            margin-right: 25px;
+                            &:after{
+                                border-left: 10px solid @baseColor;
+                                border-right: 0;
+                                right: -10px;
+                                left: auto;
+                            }
+                        }
+                    }
+                    @media (max-width: 480px){
+                        padding: 0 25px 0 0;
+                    }
+                }
+            }
+        }
+        &.aboutUsTexts{
+            padding-bottom: 35px;
+            border-bottom: 1px solid fade(@baseColor3,30%);
+        }
+        &.member3_1{
+            margin-bottom: 30px;
+            .memImg{
+                float: none;
+                padding: 0 15px;
+                width: 100%;
+                text-align: center;
+                img{
+                    max-width: 100%;
+                    display: inline-block;
+                }
+            }
+            .memberIntro{
+                text-align: center;
+                height: auto;
+                color: #FFF;
+                .name{
+                    line-height: 62px;
+                    font-size: 22px;
+                    font-weight: bold;
+                    position: relative;
+                    background: @baseColor;
+                    &:after{
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border-left: 10px solid transparent;
+                        border-right: 10px solid transparent;
+                        border-top: 10px solid @baseColor;
+                        position: absolute;
+                        left:~"calc(50% - 10.5px)";
+                        top: 100%;
+                        .transition();
+                    }
+                }
+                .pro{
+                    line-height: 62px;                    
+                    background: @baseColor4;
+                }
+                .memberSocial{
+                    height: 42px;
+                    float: none;
+                    text-align: center;
+                    @media (max-width: 480px){
+                        margin: 10px;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+
+
+@media (max-width:992px){
+    #aboutus{
+        .col-sm-9{
+            width: 100%;
+        }
+    }
+}

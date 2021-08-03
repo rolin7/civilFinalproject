@@ -1,0 +1,224 @@
+/*Projects*/
+#projectsRow {
+  padding: 50px 0 0;
+}
+#projectsRow .filtersRow {
+  border-top: 1px solid rgba(156, 156, 156, 0.3);
+  padding: 40px 0;
+  color: rgba(156, 156, 156, 0.9);
+  font-family: 'Raleway', sans-serif;
+}
+#projectsRow .filtersRow .filters > li {
+  padding: 0 40px;
+  position: relative;
+  line-height: 14px;
+  cursor: pointer;
+}
+#projectsRow .filtersRow .filters > li i {
+  margin-right: 10px;
+}
+#projectsRow .filtersRow .filters > li:after {
+  width: 5px;
+  height: 14px;
+  content: '';
+  border: 1px solid rgba(156, 156, 156, 0.8);
+  border-width: 0 1px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#projectsRow .filtersRow .filters > li.active {
+  color: #f7b71e;
+}
+#projectsRow .project {
+  position: relative;
+  overflow: hidden;
+}
+#projectsRow .project .projectImg {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+#projectsRow .project .projectDetails {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  background: rgba(156, 156, 156, 0.85);
+  color: #FFF;
+  font-family: 'Raleway', sans-serif;
+  transition: all 300ms ease-in-out;
+}
+#projectsRow .project .projectDetails .nameType {
+  transition: all 300ms ease-in-out;
+}
+#projectsRow .project .projectDetails .nameType .projectName {
+  font-size: 22px;
+}
+#projectsRow .project .projectDetails .nameType .projectType {
+  color: rgba(255, 255, 255, 0.4);
+}
+#projectsRow .project .projectDetails .projectIcons a {
+  width: 50px;
+  line-height: 50px;
+  border-color: #f7b71e;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  color: #FFF;
+  font-size: 20px;
+  text-shadow: none;
+  transition: all 300ms ease-in-out;
+}
+#projectsRow .project .projectDetails .projectIcons a:first-child {
+  margin-right: 2px;
+}
+#projectsRow .project:hover .projectDetails {
+  background: none;
+}
+#projectsRow .project:hover .projectDetails .nameType {
+  margin-left: -500%;
+}
+#projectsRow .project:hover .projectDetails .projectIcons {
+  background: none;
+}
+#projectsRow .project:hover .projectDetails .projectIcons a {
+  background: #f7b71e;
+}
+#projectsRow.fullWidth .project,
+#projectsRow.col3 .project {
+  width: calc(100% / 3);
+}
+#projectsRow.col2 .project {
+  width: calc(100% / 2);
+}
+#projectsRow.col2 .projects,
+#projectsRow.col3 .projects {
+  margin: -15px 0 0;
+  background: none;
+}
+#projectsRow.col2 .projects .project,
+#projectsRow.col3 .projects .project {
+  padding: 15px;
+}
+#projectsRow.col2 .projects .project .projectInner,
+#projectsRow.col3 .projects .project .projectInner {
+  position: relative;
+}
+#projectsRow.col2 .paginationRow,
+#projectsRow.col3 .paginationRow {
+  top: -15px;
+}
+#projectsRow.col3 .project .projectDetails {
+  overflow: hidden;
+  position: relative;
+  bottom: 0;
+}
+#projectsRow.col3 .project .projectDetails .nameType .projectName {
+  font-size: 22px;
+}
+#projectsRow.col3 .project .projectDetails .nameType .projectType {
+  color: rgba(255, 255, 255, 0.4);
+}
+#projectsRow.col3 .project .projectDetails .projectIcons {
+  margin-right: -150%;
+  width: 100%;
+  transition: all 300ms ease-in-out;
+}
+#projectsRow.col3 .project:hover .projectDetails {
+  background: #f7b71e;
+}
+#projectsRow.col3 .project:hover .projectDetails .projectIcons {
+  background: none;
+  margin-right: 0;
+}
+#projectsRow.col3 .project:hover .projectDetails .projectIcons a {
+  background: #293133;
+}
+#projectsRow.page {
+  padding-top: 0;
+}
+@media (max-width: 1024px) {
+  #projectsRow .filtersRow {
+    padding: 20px 0;
+  }
+  #projectsRow .filtersRow .filters > li {
+    padding: 0 20px;
+  }
+  #projectsRow .project .projectDetails {
+    padding: 15px;
+  }
+  #projectsRow .project .projectDetails .nameType {
+    transition: all 300ms ease-in-out;
+  }
+  #projectsRow .project .projectDetails .nameType .projectName {
+    font-size: 15px;
+  }
+  #projectsRow .project .projectDetails .nameType .projectType {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+  }
+  #projectsRow .project .projectDetails .projectIcons a {
+    width: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    text-shadow: none;
+  }
+}
+@media (max-width: 990px) {
+  #projectsRow .project .projectDetails .nameType .projectName {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  #projectsRow .project {
+    width: 50%;
+    /*        color: brown;
+            display: flex;
+            background-color: blue;
+            font-size: 20px; */
+  }
+}
+@media (max-width: 480px) {
+  #projectsRow .project {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  #projectsRow .filtersRow {
+    padding: 0;
+  }
+  #projectsRow .filtersRow .project_filderButton {
+    width: 100%;
+    background: #333d40;
+    border: 0;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    color: #FFF;
+    padding: 0;
+    margin: 0;
+    word-spacing: 10px;
+    line-height: 50px;
+  }
+  #projectsRow .filtersRow #filters {
+    padding: 10px 0;
+    transition: all 300ms ease-in-out;
+  }
+  #projectsRow .filtersRow .filters > li {
+    padding: 0;
+    width: 100%;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 0;
+  }
+  #projectsRow .filtersRow .filters > li i {
+    font-size: 24px;
+    margin: 0;
+    display: block;
+  }
+  #projectsRow .filtersRow .filters > li:after {
+    display: none;
+  }
+}

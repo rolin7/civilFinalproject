@@ -1,0 +1,67 @@
+/*Page Cover*/
+#pageCover{
+    position: relative;
+    min-height: 281px;
+    text-align: center;    
+    padding-top: 80px;
+    background: url("../images/team/cover.png") no-repeat scroll center center @baseColor;
+    img.pageCover{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        z-index: -1;
+    }
+    .pageTitle{
+        color: #FFF;
+        padding: 0 27px;
+        min-width: 138px;
+        line-height: 65px;
+        border: 1px solid @baseColor;
+        margin: 0 auto;
+        display: inline-block;
+        font-size: 22px;
+        font-family: @baseFont;
+        background: fade(#000,20%);
+    }
+    .pageBreadcrumbs{
+        margin: 0;
+        .breadcrumb{
+            border-bottom: 1px solid #FFF;
+            line-height: 40px;
+            display: inline-block;
+            border-radius: 0;
+            background: transparent;
+            li{
+                color: #FFF;
+                font-family: @baseFont;
+                a{
+                    color: #FFF;
+                    font-family: @baseFont;
+                }
+                &+ li:before{
+                    content: "\f061";
+                    display: inline-block;
+                    font: normal normal normal 14px/1 FontAwesome;
+                    font-size: inherit;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+            }
+        }
+    }
+    
+    &.blogPage{
+        background-image: url("../images/projects/cover.png");
+    }
+    
+    &.projectPage{
+        background-image: url("../images/projects/cover.png");
+    }
+    
+    &.servicePage{
+        background-image: url("../images/serviceCover.png");
+    }
+}

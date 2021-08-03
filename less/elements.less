@@ -1,0 +1,206 @@
+/*Elements*/
+#elements{
+    padding: 50px 0;
+}
+.leftAlignedTap{
+    border: 1px solid fade(@baseColor3,30%);
+    ul.nav-tabs{
+        float: left;
+        width: 232px;
+        border: 0;
+        border-right: 1px solid fade(@baseColor3,30%);
+        li{
+            width: 100%;
+            a{
+                color: fade(@baseColor3,90%);
+                font-family: @baseFont;
+                font-size: 15px;
+                text-align: center;
+                line-height: 120px;
+                height: 120px;
+                padding: 0;
+                border-radius: 0;
+                border: 0;
+                margin: 0;
+                border-bottom: 1px solid fade(@baseColor3,30%);
+                i{
+                    font-size: 24px;
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+            }
+            &:last-child{
+                a{
+                    border: 0;
+                }
+            }
+            &.active,&:hover{
+                border: 0;
+                a{
+                    background: @baseColor;
+                    color: #FFF;
+                    border: 0;
+                }
+            }
+        }
+    }
+    .tab-content{
+        width: ~"calc(100% - 232px)";
+        height: 100%;
+        float: left;
+        .tab-pane{
+            padding: 20px;            
+            color: fade(@baseColor3,90%);
+            font-family: @baseFont;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}
+
+/*Accordion*/
+#hAccordion{
+    border: 1px solid fade(@baseColor3,30%);
+    border-width: 0 1px;
+    .panel{        
+        border-radius: 0;
+        border: 0;
+        margin: 0;
+        .panel-heading{
+            border-top: 1px solid fade(@baseColor3,30%);
+            padding: 0;
+            background: none;
+            .panel-title{
+                a{
+                    display: block;
+                    line-height: 47px;
+                    font-family: @baseFont;
+                    color: #414141;
+                    font-weight: 300;
+                    i{
+                        color: @baseColor;
+                        display: inline-block;
+                        width: 38px;
+                        text-align: center;
+                    }
+                    .sign{
+                        text-align: center;
+                        color: #000;
+                        width: 45px;
+                        float: right;
+                        line-height: 47px;
+                        border-left: 1px solid fade(@baseColor3,30%);
+                        &:before{
+                            content: "\f068";
+                        }
+                    }
+                    &.collapsed{
+                        .sign{
+                            &:before{
+                                content: "\f067";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .panel-collapse{
+            .panel-body{
+                padding: 20px;
+                .icon{
+                    width: 68px;
+                    line-height: 68px;
+                    background: @baseColor;
+                    color:#FFF;
+                    border-radius: 100%;
+                    text-align: center;
+                    float: left;
+                }
+                .texts{
+                    width: ~"calc(100% - 88px)";
+                    float: right;
+                    font-family: @baseFont;
+                    font-size: 15px;
+                    color: fade(@baseColor3,90%);
+                    line-height: 25px;
+                }
+            }
+        }
+        &:last-child{
+            border-bottom: 1px solid fade(@baseColor3,30%);
+        }
+    }
+}
+
+@media (max-width: 1024px){
+    .leftAlignedTap{
+        ul.nav-tabs{
+            width: 200px;
+            float: left;
+            li{
+                a{
+                    font-size: 15px;
+                    line-height: 126px;
+                    height: 126px;
+                    i{
+                        font-size: 22px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        .tab-content{
+            width: ~"calc(100% - 200px)";
+            height: 100%;
+            float: left;
+            .tab-pane{
+                padding: 20px;            
+                color: fade(@baseColor3,90%);
+                font-family: @baseFont;
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+@media (max-width: 990px){
+    #elements{
+        .col-sm-6{
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 480px){
+    .leftAlignedTap{
+        border: 1px solid fade(@baseColor3,30%);
+        ul.nav-tabs{
+            float: none;
+            width: 100%;
+            border: 0;
+            border-bottom: 1px solid fade(@baseColor3,30%);
+            li{
+                a{
+                    line-height: 50px;
+                    height: 50px;
+                    text-align: left;
+                    padding: 0 20px;
+                    i{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        .tab-content{
+            width: 100%;
+            height: 100%;
+            float: left;
+            .tab-pane{
+                padding: 20px;            
+                color: fade(@baseColor3,90%);
+                font-family: @baseFont;
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+}

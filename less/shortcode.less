@@ -1,0 +1,131 @@
+/*Slider Shortcode Classes*/
+.bb1{
+    background: @baseColor;
+    color: #FFF;
+}
+.bb3{
+    background: @baseColor3;
+    color: #FFF;
+}
+
+.sidebar{
+    margin-top: 30px;
+    padding: 0 0 0 20px;
+    @media (max-width: 992px){
+        width: 100%;
+        padding: 0;
+    }
+}
+
+
+.widgetS{    
+    font-family: @baseFont;
+    padding: 20px;
+    border: 1px solid fade(@baseColor3, 30%);
+    margin-bottom: 20px;
+    color: @baseColor3;
+    h4{
+        color: #40434c;
+        font-weight: bold;
+        margin: 0 0 18px;
+    }
+    @media (max-width: 1024px){
+        h4{
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+/*Text Widget*/
+.textWidget{
+    p{
+        font-size: 16px;
+        margin: 0;
+    }
+    @media (max-width: 1024px){
+        p{
+            font-size: 13px;
+        }
+    }
+}
+
+/*Conact Widget*/
+.contactWidget{
+    ul{
+        margin-bottom: 0;
+        li{
+            i{
+                font-size: 16px;
+                color: @baseColor;
+                margin-right: 10px;
+                width: 17px;
+            }
+            @media (max-width: 1024px){
+                font-size: 13px;
+                margin-bottom: 5px;
+                i{
+                    font-size: 14px;
+                    width: 10px;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+/*Recent Post Widget*/
+.recentPostWidget{
+    .recentblogs{
+        .recentblog{
+            padding: 20px 0;
+            margin: 0;
+            border-bottom: 1px solid fade(@baseColor3,30%);
+            &:first-child{
+                padding-top: 0;
+            }
+            &:last-child{
+                border: 0;
+                padding-bottom: 0;
+            }
+            .media-left{
+                a{
+                    width: 50px;
+                    height: 50px;
+                    padding: 0;
+                    display: block;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .media-body{
+                a{
+                    h5{
+                        color: @baseColor3;
+                        line-height: 22px;
+                    }
+                }
+            }
+            
+            @media (max-width: 1024px){                
+                .media-left{
+                    a{
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+                .media-body{
+                    a{
+                        h5{
+                            font-size: 13px;
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

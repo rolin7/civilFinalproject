@@ -1,0 +1,52 @@
+/*Top Strip*/
+#nr_topStrip{
+    background: @baseColor4;
+    font-family: @baseFont2;
+    font-size: 13px;
+    padding: 11px 0;
+    height: 40px;
+    .c-info{
+        li{
+            border-left: 1px solid rgba(255,255,255,0.1);
+            padding: 0;
+            a{
+                color: #FFF;
+                padding: 0 10px;
+                i{
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    .lang{
+        line-height: 18px;
+        li{
+            a{
+                img{
+                    vertical-align: middle;
+                    opacity: 0.30;
+                }
+            }
+            &.active{
+                a{
+                    img{
+                        opacity: 1;
+                    }
+                }
+            }
+            &:first-child{
+                padding-left: 0;
+            }
+        }
+    }
+    @media (max-width: 479px){
+        height: 60px;
+        .c-info{
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        .lang{
+            width: 100%;
+        }
+    }
+}

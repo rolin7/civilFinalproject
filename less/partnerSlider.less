@@ -1,0 +1,52 @@
+/*Partner Slider*/
+.partnersSlide{
+    margin: 10px -15px 50px;
+    h2{
+        font-family: @baseFont;
+        font-size: 28px;
+        margin: 0 0 10px;
+    }
+    .partnerSlider{
+        position: relative;
+        .item{
+            margin: 0 10px;
+            text-align: center;
+            border: 1px solid fade(@baseColor3,30%);
+            img{
+                opacity: 0.2;
+                width: auto;
+                display: inline-block;
+                padding: 68px 0;
+                vertical-align: middle;
+                
+                .transition();                
+            }
+            &:hover{
+                img{
+                    opacity: 1;
+                }
+            }
+        }
+        .owl-controls{
+            position: absolute;
+            top: -40px;
+            right: 10px;
+            .owl-nav{
+                .owl-prev,.owl-next{
+                    float: left;
+                    color: @baseColor3;
+                    i{
+                        font-size: 28px;
+                        
+                    }
+                    &:hover{
+                        color: @baseColor4;
+                    }
+                }
+                .owl-prev{                    
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

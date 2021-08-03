@@ -1,0 +1,145 @@
+/*Comments*/
+.comments{
+    font-family: @baseFont;
+    .commentsCount{
+        font-size: 22px;
+        margin-bottom: 15px;
+        margin-top: 0;
+    }
+    .commentDisplay{
+        margin-bottom: 20px;
+        .comment{
+            margin-bottom: 30px;
+            .media-left{
+                width: 100px;
+                height: 80px;
+                line-height: 80px;
+                padding-right: 20px;
+                a{
+                    display: block;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .media-body{
+                color: @baseColor3;
+                .commenterNtime{
+                    color: fade(@baseColor3,50%);
+                    border-bottom: 1px solid fade(@baseColor3,30%);
+                    display: inline-block;
+                    padding-bottom: 5px;
+                    margin-bottom: 7px;
+                    a{
+                        color: #000;
+                        display: inline-block;
+                        &:after{
+                            content: "/";
+                            width: 25px;
+                            display: inline-block;
+                            color: fade(@baseColor3,50%);
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+        .commentreply{
+            &.commentreply2{
+                padding-left: 100px;
+            }
+            &.commentreply3{
+                padding-left: 200px;
+            }
+        }
+    }        
+    @media (max-width: 1024px){
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.commentForm{
+    margin-bottom: 40px;
+    font-family: @baseFont;
+    position: relative;
+    h3{
+        font-size: 22px;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    form{
+        .commenterInfoInputs{
+            padding-right: 10px;            
+        }
+        .input-group{
+            width: 100%;
+            margin-bottom: 10px;            
+            span{
+                border-radius: 0;
+                height: 56px;
+                border-color: fade(@baseColor3,30%);
+                background: #FFF;
+                i{
+                    height: 32px;
+                    width: 32px;
+                    line-height: 28px;
+                    border: 1px solid @baseColor;
+                    color: @baseColor;
+                    border-radius: 100%;
+                    text-align: center;
+                }
+            }
+            input{
+                border-color: fade(@baseColor3,30%);
+                border-radius: 0;
+                height: 56px;
+                padding-left: 15px;
+            }
+            label.error{
+                border: 1px solid fade(@baseColor3,30%);
+                border-top: 0;
+                padding: 5px;
+                width: 100%;
+                margin: 0;
+                font-family: @baseFont;
+                font-weight: normal;
+                color: @baseColor;
+            }
+            textarea{
+                border-color: fade(@baseColor3,30%);
+                height: 122px;
+                padding: 10px 15px;
+                border-radius: 0;
+            }
+        }
+        button{
+            line-height: 56px;
+            border-radius: 0;
+            border:0;
+            background: @baseColor;
+            padding: 0;
+            width: 100%;
+            color: #FFF;
+            text-transform: uppercase;
+            font-weight: 300;            
+            letter-spacing: 0.5px;
+            text-shadow: none;
+            &:hover{
+                background: @baseColor4;
+                color: #FFF;
+            }
+        }
+    }       
+    @media (max-width: 1024px){
+        margin-left: 0;
+        margin-right: 0;
+    }       
+    @media (max-width: 767px){
+        form{
+            .commenterInfoInputs{
+                padding-right: 0;
+            }
+        }
+    }
+}

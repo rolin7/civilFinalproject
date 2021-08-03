@@ -1,0 +1,33 @@
+/*Pagination */
+.paginationRow{
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    .pagination{
+        margin: 35px 0 33px;
+        li{
+            display: inline-block;            
+            a{
+                border-radius: 0;
+                font-family: @baseFont;
+                color: #000;
+            }
+            &.active, &:hover{
+                a{
+                    background: @baseColor;
+                    border-color: @baseColor;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+    .paginationInner{
+        border-bottom: 1px solid fade(@baseColor3,30%);
+    }
+    &.leftPos{
+        .pagination{
+            float: left;
+        }
+        padding: 0 15px;
+    }
+}

@@ -1,0 +1,271 @@
+@import (less) "./my-variable.less";
+
+/*Projects*/
+#projectsRow{
+    padding: 50px 0 0;
+    .filtersRow{
+        border-top: 1px solid fade(@baseColor3,30%);
+        padding: 40px 0;
+        color: fade(@baseColor3,90%);
+        font-family: @baseFont;
+        .filters > li{
+            i{
+                margin-right: 10px;                
+            }
+            padding: 0 40px;
+            position: relative;
+            line-height: 14px;
+            cursor: pointer;
+            &:after{
+                width: 5px;
+                height: 14px;
+                content: '';
+                border: 1px solid fade(@baseColor3,80%);
+                border-width: 0 1px;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            &.active{
+                color: @baseColor;
+            }
+        }
+    } // Filters End
+    .projects{
+    } 
+    .project{
+        position: relative;
+        overflow: hidden;
+        .projectImg{
+            width: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .projectDetails{
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            padding: 30px;
+            background: fade(@baseColor3,85%);
+            color: #FFF;            
+            font-family: @baseFont;
+            .transition();
+            .nameType{
+                .transition();
+                .projectName{
+                    font-size: 22px;
+                }
+                .projectType{
+                    color: fade(#FFF,40%);
+                }
+            }
+            .projectIcons{
+                a{
+                    width: 50px;
+                    line-height: 50px;
+                    border-color: @baseColor;
+                    padding: 0;
+                    background: none;
+                    border-radius: 0;
+                    color: #FFF;
+                    font-size: 20px;
+                    text-shadow: none;
+                    &:first-child{
+                        margin-right: 2px;
+                    }
+                    .transition();
+                }
+            }
+        }
+        &:hover{            
+            .projectDetails{
+                background: none;
+                .nameType{
+                    margin-left: -500%;
+                }
+                .projectIcons{
+                    background: none;
+                    a{
+                        background: @baseColor;
+                    }
+                }
+            }
+        }
+    }
+    &.fullWidth,&.col3{
+        .project{
+            width: ~"calc(100% / 3)";
+        }
+    }
+    &.col2{
+        .project{
+            width: ~"calc(100% / 2)";
+        }
+    }
+    &.col2,&.col3{
+        .projects{
+            margin: -15px 0 0;
+            background: none;            
+            .project{                
+                padding: 15px;
+                .projectInner{
+                    position: relative;
+                }
+            }
+        }
+        .paginationRow{
+            top: -15px;
+        }
+    }
+    &.col3{
+        .project{            
+            .projectDetails{
+                overflow: hidden;
+                position: relative;
+                bottom: 0;
+                .nameType{
+                    .projectName{
+                        font-size: 22px;
+                    }
+                    .projectType{
+                        color: fade(#FFF,40%);
+                    }
+                }
+                .projectIcons{
+                    margin-right: -150%;
+                    width: 100%;
+                    .transition();
+                    a{
+                    }
+                }
+            }            
+            &:hover{            
+                .projectDetails{
+                     background: @baseColor;
+                    .nameType{
+                        
+                    }
+                    .projectIcons{
+                        background: none;
+                        margin-right: 0;
+                        a{
+                            background: @baseColor4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#projectsRow.page{
+    padding-top: 0;
+}
+
+@media (max-width: 1024px){
+    #projectsRow{
+        .filtersRow{
+            padding: 20px 0;
+            .filters > li{
+                padding: 0 20px;
+            }
+        } // Filters End
+        .project{
+            .projectImg{}
+            .projectDetails{
+                padding: 15px;
+                .nameType{
+                    .transition();
+                    .projectName{
+                        font-size: 15px;
+                    }
+                    .projectType{
+                        color: fade(#FFF,40%);
+                        font-size: 12px;
+                    }
+                }
+                .projectIcons{
+                    a{
+                        width: 30px;
+                        line-height: 30px;
+                        font-size: 14px;
+                        text-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 990px){
+    #projectsRow{
+        .project{
+            .projectDetails{
+                .nameType{
+                    .projectName{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    #projectsRow{
+        .project{
+            width: 50%;
+            .projectImg{
+            }
+        
+        }
+    }
+}
+
+@media (max-width: 480px){
+    #projectsRow{
+        .project{
+            width: 100%;
+            .projectImg{
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    #projectsRow{
+        .filtersRow{            
+            padding: 0;
+            .project_filderButton{
+                width: 100%;
+                background: @baseColor2;
+                border: 0;
+                font-size: 24px;
+                font-family: @baseFont;
+                text-transform: uppercase;
+                color: #FFF;
+                padding: 0;
+                margin: 0;
+                word-spacing: 10px;
+                line-height: 50px;
+            }
+            #filters{
+                padding: 10px 0;
+                .transition();
+            }
+            .filters > li{
+                i{
+                    font-size: 24px;
+                    margin: 0;
+                    display: block;
+                }
+                padding: 0;
+                width: 100%;
+                font-size: 16px;
+                line-height: 30px;
+                margin-bottom: 0;                
+                &:after{display: none;}
+            }
+        }
+    }
+}
