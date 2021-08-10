@@ -301,8 +301,9 @@ a:hover {
 }
 /*----------------------------------------------------------------*/
 /*Top Strip*/
+/*#293133*/
 #nr_topStrip {
-  background: #293133;
+  background: #221f1f;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   padding: 11px 0;
@@ -349,7 +350,9 @@ a:hover {
 header {
   height: 105px;
   padding: 31px 0;
-  background: #333d40;
+  /*#333d40*/
+  /*background: linear-gradient(-120deg,#e50914, #221f1f, #f5f5f1);*/
+  background-image: url("./../images/header/header12.jpg");
 }
 header .logo {
   line-height: 43px;
@@ -411,7 +414,7 @@ header .social_nav ul li:last-child {
 }
 .navbar-static-top .navbar-collapse ul li {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
-  width: 168px;
+  width: 170px;
   text-align: center;
 }
 
@@ -423,9 +426,10 @@ header .social_nav ul li:last-child {
   line-height: 84px;
   text-transform: uppercase;
   width: 100%;
-  font-size: 20px;
+  font-size: 14px;
   position: relative;
-  color: #333d40;
+  color: #900404;
+  font-weight: bold;
 }
 .navbar-static-top .navbar-collapse ul li a:hover {
   background: #900404;
@@ -2253,6 +2257,7 @@ header .social_nav ul li:last-child {
 .twitterSlide .twitterSlider {
   position: relative;
 }
+/*
 .twitterSlide .twitterSlider .owl-stage-outer .owl-item .item i.fa {
   font-size: 24px;
   margin-bottom: 10px;
@@ -2278,6 +2283,7 @@ header .social_nav ul li:last-child {
   position: absolute;
   bottom: -50px;
 }
+
 .twitterSlide .twitterSlider .owl-controls .owl-nav .owl-prev i,
 .twitterSlide .twitterSlider .owl-controls .owl-nav .owl-next i {
   position: relative;
@@ -2300,6 +2306,7 @@ header .social_nav ul li:last-child {
   border-right: 50px solid #900404;
   left: -27px;
 }
+*/
 .footerWidget {
   margin: 30px -15px;
 }
